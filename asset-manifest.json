@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Axels_test_task/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/Axels_test_task/static/js/main.5cb6a815.chunk.js",
+    "main.js.map": "/Axels_test_task/static/js/main.5cb6a815.chunk.js.map",
+    "runtime-main.js": "/Axels_test_task/static/js/runtime-main.35b1687f.js",
+    "runtime-main.js.map": "/Axels_test_task/static/js/runtime-main.35b1687f.js.map",
+    "static/js/2.1728e5eb.chunk.js": "/Axels_test_task/static/js/2.1728e5eb.chunk.js",
+    "static/js/2.1728e5eb.chunk.js.map": "/Axels_test_task/static/js/2.1728e5eb.chunk.js.map",
+    "static/js/3.de0226bb.chunk.js": "/Axels_test_task/static/js/3.de0226bb.chunk.js",
+    "static/js/3.de0226bb.chunk.js.map": "/Axels_test_task/static/js/3.de0226bb.chunk.js.map",
+    "index.html": "/Axels_test_task/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/Axels_test_task/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.1728e5eb.chunk.js.LICENSE.txt": "/Axels_test_task/static/js/2.1728e5eb.chunk.js.LICENSE.txt",
+    "static/media/guns.1e2fac89.png": "/Axels_test_task/static/media/guns.1e2fac89.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.35b1687f.js",
+    "static/js/2.1728e5eb.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.5cb6a815.chunk.js"
+  ]
+}
