@@ -1,15 +1,19 @@
-import {ProductsList} from "./components/productList/ProductsList";
-import {Header} from "./components/Header/Header";
-import {ProductItem} from "./components/productItem/ProductItem";
+import {ProductsList} from "./components/ProductsList";
+import {Header} from "./components/Header";
+import {ProductItem} from "./components/ProductItem";
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {routes} from './common/routes';
 
 export const App = () => {
     return (
-        <div>
-            <Header />
-            <ProductsList />
-            <ProductItem />
-        </div>
+        <BrowserRouter>
+            <div>
+                <Header/>
+                <Switch>
+                    <Route exact path={routes.productList} component={ProductsList}/>
+                    <Route path={routes.productItem} component={ProductItem}/>
+                </Switch>
+            </div>
+        </BrowserRouter>
     );
 }
-
-export default App;
