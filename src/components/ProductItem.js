@@ -1,5 +1,5 @@
-import {Col, Container} from "react-bootstrap";
-import {state} from "../../state/temporary_state";
+import { Col, Container } from 'react-bootstrap';
+import { state } from '../state/temporary_state';
 import {
     Description,
     Heading,
@@ -8,12 +8,17 @@ import {
     ProductItemImg,
     ProductRating,
     ProductReviews
-} from "./ProductItemStyle";
-import {Rating} from "../Raiting/Raiting";
-import {ReviewForm} from "../ReviewForm/ReviewForm";
+} from '../styled/componentsStyles/ProductItemStyle';
+import {Rating} from './Raiting';
+import {ReviewForm} from './ReviewForm';
+import {useParams} from 'react-router-dom';
+
 
 export const ProductItem = () => {
-    const {id, name, img, description, rating, reviews} = state.products[0]
+    const { id } = useParams()
+    const item = state.products[id]
+    const { name, img, description, rating, reviews } = item
+
     return (
         <>
             <Container>

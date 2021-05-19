@@ -1,12 +1,14 @@
-import {Navbar} from "react-bootstrap";
-import {LoginLink, StyledHeader} from "./HeaderStyle";
-import imgLogo from "../../assets/img/guns.png"
+import { Navbar } from 'react-bootstrap';
+import { LoginLink, StyledHeader } from '../styled/componentsStyles/HeaderStyle';
+import imgLogo from '../assets/img/gunsLogo.png';
+import { NavLink } from 'react-router-dom';
 
 export const Header = () => {
     return (
         <>
             <StyledHeader bg="dark" variant="dark">
-                <Navbar.Brand href="#home">
+                <NavLink to="/">
+                    <Navbar.Brand>
                     <img
                         alt=""
                         src={imgLogo}
@@ -16,7 +18,8 @@ export const Header = () => {
                     />{' '}
                     GunsPlace
                 </Navbar.Brand>
-                <LoginLink href="#">Login</LoginLink>
+                </NavLink>
+                <LoginLink to={"/login"}>Login</LoginLink>
             </StyledHeader>
         </>
     )
