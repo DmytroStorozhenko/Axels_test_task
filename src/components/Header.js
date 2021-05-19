@@ -3,12 +3,11 @@ import { LoginLink, StyledHeader } from '../styled/componentsStyles/HeaderStyle'
 import imgLogo from '../assets/img/gunsLogo.png';
 import { NavLink } from 'react-router-dom';
 
-export const Header = () => {
-    return (
-        <>
-            <StyledHeader bg="dark" variant="dark">
-                <NavLink to="/">
-                    <Navbar.Brand>
+export const Header = () => (
+    <>
+        <StyledHeader bg="dark" variant="dark">
+            <NavLink to="/">
+                <Navbar.Brand>
                     <img
                         alt=""
                         src={imgLogo}
@@ -18,9 +17,8 @@ export const Header = () => {
                     />{' '}
                     GunsPlace
                 </Navbar.Brand>
-                </NavLink>
-                <LoginLink to={"/login"}>Login</LoginLink>
-            </StyledHeader>
-        </>
-    )
-}
+            </NavLink>
+            <LoginLink to={"/login"}>Login</LoginLink>
+        </StyledHeader>
+    </>
+)
