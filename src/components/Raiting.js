@@ -26,4 +26,5 @@ export const Rating = () => (
             </Col>
         </Form.Row>
     </Form>
-)
+);
+

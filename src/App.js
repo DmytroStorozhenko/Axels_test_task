@@ -1,6 +1,8 @@
-import { ProductsList, ProductItem, Header } from './components/index';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 import { routes } from './common/routes';
+
+import { Header, ProductItem, ProductsList } from './components/index';
 
 export const App = () => (
     <BrowserRouter>

@@ -1,5 +1,5 @@
 export const routes = {
-    login: "",
-    productList: "/",
-    productItem: "/item/:id?"
-}
+    login: '',
+    productList: '/',
+    productItem: '/item/:id?'
+};

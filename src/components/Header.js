@@ -1,7 +1,9 @@
 import { Navbar } from 'react-bootstrap';
-import { LoginLink, StyledHeader } from '../styled/componentsStyles/HeaderStyle';
-import imgLogo from '../assets/img/gunsLogo.png';
 import { NavLink } from 'react-router-dom';
+
+import Logo from '../assets/img/gunsLogo.png';
+
+import { LoginLink, StyledHeader } from '../styled/componentsStyles/HeaderStyle';
 
 export const Header = () => (
     <>
@@ -10,7 +12,7 @@ export const Header = () => (
                 <Navbar.Brand>
                     <img
                         alt=""
-                        src={imgLogo}
+                        src={Logo}
                         width="30"
                         height="30"
                         className="d-inline-block align-top"
@@ -21,4 +23,4 @@ export const Header = () => (
             <LoginLink to={"/login"}>Login</LoginLink>
         </StyledHeader>
     </>
-)
+);
