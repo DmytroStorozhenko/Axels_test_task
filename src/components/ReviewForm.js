@@ -1,3 +1,4 @@
+import React from 'react';
 import { Form } from 'react-bootstrap';
 
 import { ReviewButton } from '../styled/componentsStyles/ReviewFormStyle';
