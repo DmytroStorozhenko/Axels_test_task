@@ -1,15 +1,17 @@
-import {ProductsList} from "./components/productList/ProductsList";
-import {Header} from "./components/Header/Header";
-import {ProductItem} from "./components/productItem/ProductItem";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-export const App = () => {
-    return (
+import { routes } from './common/routes';
+
+import { Header, ProductItem, ProductsList } from './components/index';
+
+export const App = () => (
+    <BrowserRouter>
         <div>
-            <Header />
-            <ProductsList />
-            <ProductItem />
+            <Header/>
+            <Switch>
+                <Route exact path={routes.productList} component={ProductsList}/>
+                <Route path={routes.productItem} component={ProductItem}/>
+            </Switch>
         </div>
-    );
-}
-
-export default App;
+    </BrowserRouter>
+);

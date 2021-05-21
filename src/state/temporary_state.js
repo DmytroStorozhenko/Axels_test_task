@@ -1,7 +1,7 @@
 export const state = {
     products: [
         {
-            id: 1,
+            id: 0,
             name: "Карабин Marlin 1895GS кал .45-70 Gov’t",
             img: "https://ibis.net.ua/static/products_pictures/18243466_52772613.jpg",
             description: "Marlin 1895 – аутентичный карабин периода освоения Дикого Запада, что стало определяющим " +
@@ -17,7 +17,7 @@ export const state = {
             reviews: ["Good gun)", "Like a western"]
         },
         {
-            id: 2,
+            id: 1,
             name: "Ружье Remington 870 Express кал. 12/76. Ствол - 71 см",
             img: "https://ibis.net.ua/static/products_pictures/12500790.jpg",
             description: "Remington 870 представляет собой классическое помповое ружьё, перезаряжаемое передёргиванием " +
@@ -39,7 +39,7 @@ export const state = {
             reviews: []
         },
         {
-            id: 3,
+            id: 2,
             name: "Ружье Fabarm Elos A2 Notte Field кал. 12/76. Ствол - 66 см",
             img: "https://ibis.net.ua/static/products_pictures/8/9/f/12510696.jpg",
             description: "Ружье по умеренной цене для тех, кто ищет оружие с отличными характеристиками. Моделью ELOS " +
@@ -54,7 +54,7 @@ export const state = {
             reviews: []
         },
         {
-            id: 4,
+            id: 3,
             name: "Карабин Savage 110 Tactical Desert кал. 6,5 PRC",
             img: "https://ibis.net.ua/static/products_pictures/7/5/7/12480192.jpg",
             description: "Savage 110 Tactical - обновленная линейка на базе карабинов 10 FCP-SR, сочетающая в себе " +
@@ -80,7 +80,7 @@ export const state = {
             reviews: []
         },
         {
-            id: 5,
+            id: 4,
             name: "Винтовка охотничья Мосина кал. 7,62х54 R",
             img: "https://ibis.net.ua/static/products_pictures/17950761_52753445.jpg",
             description: "Трёхлинейная винтовка системы Мосина образца 1891 года, служила бойцам в тяжелые времена " +

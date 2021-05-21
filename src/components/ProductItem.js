@@ -1,5 +1,6 @@
-import {Col, Container} from "react-bootstrap";
-import {state} from "../../state/temporary_state";
+import { useParams } from 'react-router-dom';
+import { Col, Container } from 'react-bootstrap';
+
 import {
     Description,
     Heading,
@@ -8,12 +9,17 @@ import {
     ProductItemImg,
     ProductRating,
     ProductReviews
-} from "./ProductItemStyle";
-import {Rating} from "../Raiting/Raiting";
-import {ReviewForm} from "../ReviewForm/ReviewForm";
+} from '../styled/componentsStyles/ProductItemStyle';
+import { Rating } from './Raiting';
+import { ReviewForm } from './ReviewForm';
+
+import { state } from '../state/temporary_state';
 
 export const ProductItem = () => {
-    const {id, name, img, description, rating, reviews} = state.products[0]
+    const { id } = useParams();
+    const item = state.products[id];
+    const { name, img, description, rating, reviews } = item;
+
     return (
         <>
             <Container>
@@ -39,15 +45,14 @@ export const ProductItem = () => {
                 <ProductReviews lg={12}>
                     <h5>Отзывы:</h5>
                     {
-                        reviews.map(review => (
+                        reviews.map( review => (
                                 <p>{review}</p>
                             )
                         )
                     }
-                    <ReviewForm />
+                    <ReviewForm/>
                 </ProductReviews>
             </Container>
-
         </>
     )
-}
+};
