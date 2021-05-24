@@ -3,7 +3,7 @@ import { Card, Col, Container, Row } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { routes } from '../common/routes';
-import { getProducts } from '../redux/productsReducer';
+import { getProducts } from '../redux/productsListReducer';
 import { store } from '../redux/store';
 import { StyledNavLink } from '../styled/commonStyles';
 import { ProductCard, ProductImg, ProductTitle } from '../styled/componentsStyles/ProductListStyle';
@@ -14,7 +14,8 @@ export const ProductsList = () => {
 
     useEffect( () => {
         dispatch( getProducts() )
-    }, [dispatch] );
+    },[dispatch] );
+
     return (
         <>
             <Container>

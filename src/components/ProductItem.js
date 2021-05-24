@@ -1,8 +1,9 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import React, { useEffect } from 'react';
 import { Col, Container } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import { routes } from '../common/routes';
+import { getProduct } from '../redux/productReducer';
 import { store } from '../redux/store';
 
 import {
@@ -13,16 +14,21 @@ import {
     ProductItemDescription,
     ProductItemImg,
     ProductRating,
-    ProductReviews, StyledNavLinkArrow
+    ProductReviews,
+    StyledNavLinkArrow
 } from '../styled/componentsStyles/ProductItemStyle';
 import { Rating } from './Raiting';
 import { ReviewForm } from './ReviewForm';
 
 export const ProductItem = () => {
+    const dispatch = useDispatch();
     const { id } = useParams();
-    const product = useSelector( () => store.getState().productsList.products[id]);
-    const { name, img, description, rating, reviews } = product;
+    const product = useSelector( () => store.getState().product );
+    const { img, name, description, rating, reviews } = product;
 
+    useEffect( () => {
+        dispatch( getProduct( id ) )
+    }, [dispatch] );
     return (
         <>
             <Container>
@@ -50,11 +56,13 @@ export const ProductItem = () => {
                 </ProductRating>
                 <ProductReviews lg={12}>
                     <h5>Отзывы:</h5>
-                    {
-                        reviews.map( (review, index) => (
-                                <p key={index}>{review}</p>
-                            )
-                        )
+                    {!reviews ? '' :
+                        reviews.length !== 0 ?
+                            reviews.map( (review, index) => (
+                                    <p key={index}>{review}</p>
+                                )
+                            ) :
+                            <p>Нет отзывов...</p>
                     }
                     <ReviewForm/>
                 </ProductReviews>
