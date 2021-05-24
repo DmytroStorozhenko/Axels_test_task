@@ -10,6 +10,7 @@ export const ProductInfoContainer = styled( Row )`
 
 export const ProductItemImg = styled.img`
   width: 100%;
+  margin: 30px 0;
 `;
 
 export const ProductItemDescription = styled.div`
@@ -32,16 +33,17 @@ export const ProductRating = styled( Row )`
 `;
 export const ProductReviews = styled( Row )`
   width: 100%;
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 `;
 
-export const StyledNavLinkArrow = styled(StyledNavLink)`
-    color: ${white};
+export const StyledNavLinkArrow = styled( StyledNavLink )`
+  color: ${white};
 `;
 
 export const ArrowBackButton = styled( Button )`
-font-size: 30px;
+  font-size: 30px;
 `;

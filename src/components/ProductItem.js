@@ -3,7 +3,7 @@ import { Col, Container } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { routes } from '../common/routes';
-import { getProduct } from '../redux/productReducer';
+import { addReview, getProduct } from '../redux/productReducer';
 import { store } from '../redux/store';
 
 import {
@@ -29,6 +29,9 @@ export const ProductItem = () => {
     useEffect( () => {
         dispatch( getProduct( id ) )
     }, [dispatch] );
+
+    const submitHandler = (review) => dispatch(addReview([review]))
+
     return (
         <>
             <Container>
@@ -36,17 +39,17 @@ export const ProductItem = () => {
                     <ArrowBackButton variant="dark" size="sm">&#60;</ArrowBackButton>
                 </StyledNavLinkArrow>
                 <ProductInfoContainer lg={11}>
-                    <Col sm={11} md={6} lg={6}>
+                    <Col sm={10} md={6} lg={6}>
                         <ProductItemImg src={img}/>
                     </Col>
-                    <Col sm={11} md={6} lg={6}>
+                    <Col sm={10} md={6} lg={6}>
                         <ProductItemDescription>
                             <Heading>{name}</Heading>
                             <Description>{description}</Description>
                         </ProductItemDescription>
                     </Col>
                 </ProductInfoContainer>
-                <ProductRating lg={12}>
+                <ProductRating lg={10}>
                     <Col>
                         <div>
                             <h4>Оценка: {rating}</h4>
@@ -54,7 +57,7 @@ export const ProductItem = () => {
                         <Rating/>
                     </Col>
                 </ProductRating>
-                <ProductReviews lg={12}>
+                <ProductReviews sm={10} lg={12}>
                     <h5>Отзывы:</h5>
                     {!reviews ? '' :
                         reviews.length !== 0 ?
@@ -64,7 +67,7 @@ export const ProductItem = () => {
                             ) :
                             <p>Нет отзывов...</p>
                     }
-                    <ReviewForm/>
+                    <ReviewForm submitHandler={submitHandler} />
                 </ProductReviews>
             </Container>
         </>
