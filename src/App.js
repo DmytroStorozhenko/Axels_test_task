@@ -1,8 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import { routes } from './common/routes';
-
 import { Header, ProductItem, ProductsList } from './components/index';
 
 export const App = () => (
@@ -10,8 +8,8 @@ export const App = () => (
         <div>
             <Header/>
             <Switch>
-                <Route exact path={routes.productList} component={ProductsList}/>
-                <Route path={routes.productItem} component={ProductItem}/>
+                <Route exact path={'/'} component={ProductsList}/>
+                <Route path={'/item/:id?'} component={ProductItem}/>
             </Switch>
         </div>
     </BrowserRouter>

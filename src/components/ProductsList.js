@@ -2,8 +2,7 @@ import React, { useEffect } from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { routes } from '../common/routes';
-import { getProducts } from '../redux/productsListReducer';
+import { getProducts } from '../redux/ducks/productsList';
 import { store } from '../redux/store';
 import { StyledNavLink } from '../styled/commonStyles';
 import { ProductCard, ProductImg, ProductTitle } from '../styled/componentsStyles/ProductListStyle';
@@ -23,7 +22,7 @@ export const ProductsList = () => {
                     {
                         products.map( product => (
                                 <Col key={product.id}>
-                                    <StyledNavLink to={`${routes.productItemId}${product.id}`}
+                                    <StyledNavLink to={`/item/${product.id}`}
                                                    style={{ textDecoration: 'none' }}>
                                         <ProductCard>
                                             <ProductImg variant="top" src={product.img}/>

@@ -1,6 +1,6 @@
 import { put, all, takeEvery, call } from 'redux-saga/effects'
 
-import { fetchProducts } from '../common/helpers';
+import { fetchProducts } from '../../common/api';
 
 export const GET_PRODUCTS_LIST = 'my-app/redux/GET_PRODUCTS_LIST';
 const SET_PRODUCTS_LIST = 'my-app/redux/SET_PRODUCTS_LIST';

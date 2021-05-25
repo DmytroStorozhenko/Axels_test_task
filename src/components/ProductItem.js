@@ -2,9 +2,6 @@ import React, { useEffect } from 'react';
 import { Col, Container } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { routes } from '../common/routes';
-import { addReview, getProduct } from '../redux/productReducer';
-import { store } from '../redux/store';
 
 import {
     ArrowBackButton,
@@ -19,6 +16,8 @@ import {
 } from '../styled/componentsStyles/ProductItemStyle';
 import { Rating } from './Raiting';
 import { ReviewForm } from './ReviewForm';
+import { addReview, getProduct } from '../redux/ducks/product';
+import { store } from '../redux/store';
 
 export const ProductItem = () => {
     const dispatch = useDispatch();
@@ -35,7 +34,7 @@ export const ProductItem = () => {
     return (
         <>
             <Container>
-                <StyledNavLinkArrow to={routes.productList}>
+                <StyledNavLinkArrow to={'/'}>
                     <ArrowBackButton variant="dark" size="sm">&#60;</ArrowBackButton>
                 </StyledNavLinkArrow>
                 <ProductInfoContainer lg={11}>
