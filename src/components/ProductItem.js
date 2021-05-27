@@ -14,8 +14,7 @@ import {
     ProductReviews,
     StyledNavLinkArrow
 } from '../styled/componentsStyles/ProductItemStyle';
-import { Rating } from './Raiting';
-import { ReviewForm } from './ReviewForm';
+import { Rating, ReviewForm } from './index';
 import { addReview, getProduct } from '../redux/ducks/product';
 import { store } from '../redux/store';
 
@@ -24,12 +23,11 @@ export const ProductItem = () => {
     const { id } = useParams();
     const product = useSelector( () => store.getState().product );
     const { img, name, description, rating, reviews } = product;
+    const submitHandler = (review) => dispatch(addReview([review]));
 
     useEffect( () => {
         dispatch( getProduct( id ) )
     }, [dispatch] );
-
-    const submitHandler = (review) => dispatch(addReview([review]))
 
     return (
         <>
