@@ -9,5 +9,5 @@ export const ReviewButton = styled( Button )`
 `;
 
 export const ErrorBlock = styled.div`
-color: ${red}
+  color: ${red}
 `

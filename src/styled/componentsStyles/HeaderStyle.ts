@@ -5,4 +5,3 @@ export const StyledHeader = styled( Navbar )`
   margin-bottom: 30px;
   justify-content: space-between;
 `;
-

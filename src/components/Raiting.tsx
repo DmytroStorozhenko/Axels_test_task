@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Button, Col, Form } from 'react-bootstrap';
 
-export const Rating = () => (
+export const Rating: FC = () => (
     <Form>
         <Form.Row className="align-items-center">
             <Col xs="auto" className="my-1">
