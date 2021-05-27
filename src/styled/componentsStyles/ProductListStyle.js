@@ -27,3 +27,10 @@ export const ProductImg = styled( Card.Img )`
   width: 250px;
   margin: 30px 20px 0;
 `;
+
+export const ProductTitle = styled(Card.Title)`
+  color: black;
+  &:hover {
+    text-decoration: none;
+  }
+`;

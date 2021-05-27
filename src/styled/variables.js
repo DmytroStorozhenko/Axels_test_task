@@ -1,4 +1,6 @@
 export const white = '#FFF'
+export const black = '#000'
+export const red = '#c90000'
 
 const sizes = {
     mobile: '560px',

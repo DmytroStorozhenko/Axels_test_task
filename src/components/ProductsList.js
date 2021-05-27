@@ -1,12 +1,19 @@
+import React, { useEffect } from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { ProductCard, ProductImg } from '../styled/componentsStyles/ProductListStyle';
-
-import { state } from '../state/temporary_state';
+import { getProducts } from '../redux/ducks/productsList';
+import { store } from '../redux/store';
+import { StyledNavLink } from '../styled/commonStyles';
+import { ProductCard, ProductImg, ProductTitle } from '../styled/componentsStyles/ProductListStyle';
 
 export const ProductsList = () => {
-    const products = state.products;
+    const dispatch = useDispatch();
+    const products = useSelector( () => store.getState().productsList.products);
+
+    useEffect( () => {
+        dispatch( getProducts() )
+    },[dispatch] );
 
     return (
         <>
@@ -14,16 +21,16 @@ export const ProductsList = () => {
                 <Row xs={1} md={2} lg={3}>
                     {
                         products.map( product => (
-                                <Col>
-                                    <NavLink to={`/item/${product.id}`}>
-                                        <ProductCard
-                                            key={product.id}>
+                                <Col key={product.id}>
+                                    <StyledNavLink to={`/item/${product.id}`}
+                                                   style={{ textDecoration: 'none' }}>
+                                        <ProductCard>
                                             <ProductImg variant="top" src={product.img}/>
                                             <Card.Body>
-                                                <Card.Title as="p">{product.name}</Card.Title>
+                                                <ProductTitle as="p">{product.name}</ProductTitle>
                                             </Card.Body>
                                         </ProductCard>
-                                    </NavLink>
+                                    </StyledNavLink>
                                 </Col>
                             )
                         )
