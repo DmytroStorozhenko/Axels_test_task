@@ -28,4 +28,3 @@ export const Rating: FC = () => (
         </Form.Row>
     </Form>
 );
-

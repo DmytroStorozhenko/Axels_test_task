@@ -3,7 +3,7 @@ import { all, call, put, takeEvery } from 'redux-saga/effects';
 import { fetchProducts, ProductsType } from '../../common/api';
 
 export const GET_PRODUCTS_LIST = 'my-app/redux/GET_PRODUCTS_LIST';
-const SET_PRODUCTS_LIST = 'my-app/redux/SET_PRODUCTS_LIST';
+export const SET_PRODUCTS_LIST = 'my-app/redux/SET_PRODUCTS_LIST';
 
 const initialState = { products: [] };
 
@@ -11,7 +11,6 @@ export default function productsListReducer(state: ProductsType = initialState, 
     switch (action.type) {
         case SET_PRODUCTS_LIST:
             return { ...state, products: action.payload.products }
-
         default:
             return state
     }
@@ -24,7 +23,7 @@ function* getProductsListWatcher() {
     yield takeEvery( GET_PRODUCTS_LIST, getProductsListWorker )
 }
 
-function* getProductsListWorker() {
+export function* getProductsListWorker() {
     try {
         const response: ProductsType = yield call( fetchProducts );
         yield put( setProducts( response ) )

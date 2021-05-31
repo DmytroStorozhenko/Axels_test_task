@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import { Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
-import Logo from '../assets/img/gunsLogo.png';
-
 import { StyledHeader } from '../styled/componentsStyles/HeaderStyle';
+
+import Logo from '../assets/img/gunsLogo.png';
 
 export const Header: FC = () => (
     <>

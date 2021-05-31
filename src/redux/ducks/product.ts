@@ -4,8 +4,8 @@ import { fetchProducts, ProductItemType, ProductsType } from '../../common/api';
 
 export const GET_PRODUCT = 'my-app/redux/GET_PRODUCT';
 export const ADD_REVIEW = 'my-app/redux/ADD_REVIEW';
-const SET_PRODUCT = 'my-app/redux/SET_PRODUCT';
-const SET_REVIEW = 'my-app/redux/SET_REVIEW';
+export const SET_PRODUCT = 'my-app/redux/SET_PRODUCT';
+export const SET_REVIEW = 'my-app/redux/SET_REVIEW';
 
 const initialState = {
     id: null,
@@ -16,7 +16,7 @@ const initialState = {
     reviews: []
 };
 
-export default function productReducer(state = initialState, action: ProductActionsType) {
+export default function productReducer(state: ProductItemType = initialState, action: ProductActionsType) {
     switch (action.type) {
         case SET_PRODUCT:
             return { ...state, ...action.payload }
@@ -27,11 +27,10 @@ export default function productReducer(state = initialState, action: ProductActi
     }
 };
 
-
 export const getProduct = (id: number) => ({ type: GET_PRODUCT, id }) as const;
 export const addReview = (review: string) => ({ type: ADD_REVIEW, review }) as const;
-const setProduct = (payload: ProductItemType) => ({ type: SET_PRODUCT, payload }) as const;
-const setReview = (review: string) => ({ type: SET_REVIEW, review }) as const;
+export const setProduct = (payload: ProductItemType) => ({ type: SET_PRODUCT, payload }) as const;
+export const setReview = (review: string) => ({ type: SET_REVIEW, review }) as const;
 
 function* getProductsWatcher() {
     yield takeEvery( GET_PRODUCT, getProductsWorker )

@@ -22,12 +22,14 @@ import { ProductItemType } from "../common/api";
 
 export const ProductItem: FC = () => {
     const dispatch = useDispatch();
-    const { id } = useParams<{ id?: string }>();
     const product = useSelector<AppRootStateType, ProductItemType>( state => state.product );
     const { img, name, description, rating, reviews } = product;
     const submitHandler = (review: string) => dispatch( addReview( review ) );
 
+    let { id } = useParams<{ id?: string | undefined }>();
+
     useEffect( () => {
+        if (id === undefined) id = '0'
         dispatch( getProduct( Number( id ) ) )
     }, [dispatch] );
 
