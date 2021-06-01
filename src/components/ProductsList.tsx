@@ -7,7 +7,7 @@ import { StyledNavLink } from '../styled/commonStyles';
 import { ProductCard, ProductImg, ProductTitle } from '../styled/componentsStyles/ProductListStyle';
 
 import { AppRootStateType } from '../redux/store';
-import { ProductsType } from "../common/api";
+import { ProductsType } from '../common/api';
 
 export const ProductsList: FC = () => {
     const dispatch = useDispatch();

@@ -18,7 +18,7 @@ import { Rating, ReviewForm } from './index';
 import { addReview, getProduct } from '../redux/ducks/product';
 
 import { AppRootStateType } from '../redux/store';
-import { ProductItemType } from "../common/api";
+import { ProductItemType } from '../common/api';
 
 export const ProductItem: FC = () => {
     const dispatch = useDispatch();
