@@ -1,11 +1,20 @@
-import { Formik } from 'formik';
+import { Formik, FormikHelpers } from 'formik';
 import React from 'react';
 import { Form } from 'react-bootstrap';
 import * as Yup from 'yup';
 
 import { ErrorBlock, ReviewButton } from '../styled/componentsStyles/ReviewFormStyle';
+import { addReviewActionType } from '../redux/ducks/product';
 
-export const ReviewForm = (props) =>
+type ReviewPropsType = {
+    submitHandler: (review: string) => addReviewActionType
+}
+
+type FormValuesType = {
+    review: string
+}
+
+export const ReviewForm = (props: ReviewPropsType) =>
     <>
         <Formik
             initialValues={{ review: '' }}
@@ -14,10 +23,10 @@ export const ReviewForm = (props) =>
                     .max( 300, 'Длинна отзыва не должна превышать 300 символов' )
                     .required( 'Отзыв не должен быть пустым' ),
             } )}
-            onSubmit={(values, { setSubmitting, resetForm }) => {
+            onSubmit={(values, { setSubmitting, resetForm }: FormikHelpers<FormValuesType>) => {
                 props.submitHandler( values.review )
                 setSubmitting( false )
-                resetForm( '' )
+                resetForm( {} )
             }}>
             {({
                   handleSubmit,
@@ -27,12 +36,10 @@ export const ReviewForm = (props) =>
               }) => (
                 <Form
                     noValidate
-                    onSubmit={handleSubmit}
-                    name="review"
-                    type="textarea">
+                    onSubmit={handleSubmit}>
                     <Form.Control
                         as="textarea"
-                        name="review"
+                        type="textarea"
                         cols={80} rows={2}
                         isInvalid={!!errors.review}
                         {...getFieldProps( 'review' )}/>

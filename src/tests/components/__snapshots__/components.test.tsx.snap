@@ -1,0 +1,320 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders correctly 1`] = `
+<div
+  className="sc-dIsUp ixfuAO spinner-border"
+  role="status"
+>
+  <span
+    className="sr-only"
+  >
+    Загрузка...
+  </span>
+</div>
+`;
+
+exports[`Header renders correctly 1`] = `
+<nav
+  className="sc-bdnxRM cnostj navbar navbar-expand navbar-dark bg-dark"
+>
+  <a
+    aria-current="page"
+    className="active"
+    href="/"
+    onClick={[Function]}
+    style={Object {}}
+  >
+    <span
+      className="navbar-brand"
+    >
+      <img
+        alt=""
+        className="d-inline-block align-top"
+        height="30"
+        src="gunsLogo.png"
+        width="30"
+      />
+       
+      GunsPlace
+    </span>
+  </a>
+</nav>
+`;
+
+exports[`Preloader renders correctly 1`] = `
+<div
+  className="sc-dIsUp ixfuAO spinner-border"
+  role="status"
+>
+  <span
+    className="sr-only"
+  >
+    Загрузка...
+  </span>
+</div>
+`;
+
+exports[`ProductsItem renders correctly 1`] = `
+<div
+  className="container"
+>
+  <a
+    aria-current="page"
+    className="sc-gtsrHT sc-pNWdM jqfXrq hIbdhi active"
+    href="/"
+    onClick={[Function]}
+    style={Object {}}
+  >
+    <button
+      className="sc-jrsJWt eFXFIv btn btn-dark btn-sm"
+      disabled={false}
+      type="button"
+    >
+      &lt;
+    </button>
+  </a>
+  <div
+    className="sc-dlnjwi cbbvwu row row-cols-lg-11"
+  >
+    <div
+      className="col-lg-6 col-md-6 col-sm-10"
+    >
+      <img
+        className="sc-hKFxyN jdAsRn"
+        src=""
+      />
+    </div>
+    <div
+      className="col-lg-6 col-md-6 col-sm-10"
+    >
+      <div
+        className="sc-eCApnc jSSbuU"
+      >
+        <h4
+          className="sc-jSFjdj"
+        >
+          
+        </h4>
+        <p
+          className="sc-gKAaRy evMoJY"
+        >
+          
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-iCoGMd bkQnzH row row-cols-lg-10"
+  >
+    <div
+      className="col"
+    >
+      <div>
+        <h4>
+          Оценка: 
+        </h4>
+      </div>
+      <form
+        className=""
+      >
+        <div
+          className="align-items-center form-row"
+        >
+          <div
+            className="my-1 col-auto"
+          >
+            <label
+              className="mr-sm-2 form-label sr-only"
+              htmlFor="inlineFormCustomSelect"
+            >
+              Preference
+            </label>
+            <select
+              className="mr-sm-2 custom-select"
+              id="inlineFormCustomSelect"
+            >
+              <option
+                value="0"
+              >
+                ...
+              </option>
+              <option
+                value="1"
+              >
+                1
+              </option>
+              <option
+                value="2"
+              >
+                2
+              </option>
+              <option
+                value="3"
+              >
+                3
+              </option>
+              <option
+                value="4"
+              >
+                4
+              </option>
+              <option
+                value="5"
+              >
+                5
+              </option>
+            </select>
+          </div>
+          <div
+            className="my-1 col-auto"
+          >
+            <button
+              className="btn btn-primary"
+              disabled={false}
+              type="submit"
+            >
+              Поставить оценку
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div
+    className="sc-fujyAs eALNKY row row-cols-lg-12 row-cols-sm-10"
+  >
+    <h5>
+      Отзывы:
+    </h5>
+    <p>
+      Нет отзывов...
+    </p>
+    <form
+      className=""
+      noValidate={true}
+      onSubmit={[Function]}
+    >
+      <textarea
+        className="form-control"
+        cols={80}
+        name="review"
+        onBlur={[Function]}
+        onChange={[Function]}
+        rows={2}
+        type="textarea"
+        value=""
+      />
+      <button
+        className="sc-bqGGPW dxFzTZ btn btn-primary"
+        disabled={false}
+        type="submit"
+      >
+        Оставить отзыв
+      </button>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`ProductsList renders correctly 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row row-cols-lg-3 row-cols-md-2 row-cols-1"
+  />
+</div>
+`;
+
+exports[`Rating renders correctly 1`] = `
+<form
+  className=""
+>
+  <div
+    className="align-items-center form-row"
+  >
+    <div
+      className="my-1 col-auto"
+    >
+      <label
+        className="mr-sm-2 form-label sr-only"
+        htmlFor="inlineFormCustomSelect"
+      >
+        Preference
+      </label>
+      <select
+        className="mr-sm-2 custom-select"
+        id="inlineFormCustomSelect"
+      >
+        <option
+          value="0"
+        >
+          ...
+        </option>
+        <option
+          value="1"
+        >
+          1
+        </option>
+        <option
+          value="2"
+        >
+          2
+        </option>
+        <option
+          value="3"
+        >
+          3
+        </option>
+        <option
+          value="4"
+        >
+          4
+        </option>
+        <option
+          value="5"
+        >
+          5
+        </option>
+      </select>
+    </div>
+    <div
+      className="my-1 col-auto"
+    >
+      <button
+        className="btn btn-primary"
+        disabled={false}
+        type="submit"
+      >
+        Поставить оценку
+      </button>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`ReviewForm renders correctly 1`] = `
+<form
+  className=""
+  noValidate={true}
+  onSubmit={[Function]}
+>
+  <textarea
+    className="form-control"
+    cols={80}
+    name="review"
+    onBlur={[Function]}
+    onChange={[Function]}
+    rows={2}
+    type="textarea"
+    value=""
+  />
+  <button
+    className="sc-bqGGPW dxFzTZ btn btn-primary"
+    disabled={false}
+    type="submit"
+  >
+    Оставить отзыв
+  </button>
+</form>
+`;

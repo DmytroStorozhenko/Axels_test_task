@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Button, Row } from 'react-bootstrap';
+
 import { StyledNavLink } from '../commonStyles';
 import { white } from '../variables';
 
