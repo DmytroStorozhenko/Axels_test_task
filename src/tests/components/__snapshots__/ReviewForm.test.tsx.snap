@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReviewForm renders correctly 1`] = `
+<form
+  className=""
+  noValidate={true}
+  onSubmit={[Function]}
+>
+  <textarea
+    className="form-control"
+    cols={80}
+    name="review"
+    onBlur={[Function]}
+    onChange={[Function]}
+    rows={2}
+    type="textarea"
+    value=""
+  />
+  <button
+    className="sc-bqGGPW dxFzTZ btn btn-primary"
+    disabled={false}
+    type="submit"
+  >
+    Оставить отзыв
+  </button>
+</form>
+`;
