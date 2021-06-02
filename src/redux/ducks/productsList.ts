@@ -14,7 +14,7 @@ export default function productsListReducer(state: ProductsType = initialState, 
         default:
             return state
     }
-};
+}
 
 export const getProducts = () => ({ type: GET_PRODUCTS_LIST }) as const;
 export const setProducts = (payload: ProductsType) => ({ type: SET_PRODUCTS_LIST, payload }) as const;

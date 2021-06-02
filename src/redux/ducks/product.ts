@@ -25,7 +25,7 @@ export default function productReducer(state: ProductItemType = initialState, ac
         default:
             return state
     }
-};
+}
 
 export const getProduct = (id: number) => ({ type: GET_PRODUCT, id }) as const;
 export const addReview = (review: string) => ({ type: ADD_REVIEW, review }) as const;
