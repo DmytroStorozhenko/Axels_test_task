@@ -66,3 +66,70 @@ exports[`Rating renders correctly 1`] = `
   </div>
 </form>
 `;
+
+exports[`Snapshot for Rating component 1`] = `
+<form
+  className=""
+>
+  <div
+    className="align-items-center form-row"
+  >
+    <div
+      className="my-1 col-auto"
+    >
+      <label
+        className="mr-sm-2 form-label sr-only"
+        htmlFor="inlineFormCustomSelect"
+      >
+        Preference
+      </label>
+      <select
+        className="mr-sm-2 custom-select"
+        id="inlineFormCustomSelect"
+      >
+        <option
+          value="0"
+        >
+          ...
+        </option>
+        <option
+          value="1"
+        >
+          1
+        </option>
+        <option
+          value="2"
+        >
+          2
+        </option>
+        <option
+          value="3"
+        >
+          3
+        </option>
+        <option
+          value="4"
+        >
+          4
+        </option>
+        <option
+          value="5"
+        >
+          5
+        </option>
+      </select>
+    </div>
+    <div
+      className="my-1 col-auto"
+    >
+      <button
+        className="btn btn-primary"
+        disabled={false}
+        type="submit"
+      >
+        Поставить оценку
+      </button>
+    </div>
+  </div>
+</form>
+`;

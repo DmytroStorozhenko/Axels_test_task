@@ -6,7 +6,7 @@ import { ProductItem } from '../../components';
 
 import { store } from '../../redux/store';
 
-test( 'ProductItem renders correctly', () => {
+test( 'Snapshot for ProductItem component', () => {
     const tree = renderer
         .create(
             <Provider store={store}>

@@ -12,3 +12,16 @@ exports[`Preloader renders correctly 1`] = `
   </span>
 </div>
 `;
+
+exports[`Snapshot for Preloader component 1`] = `
+<div
+  className="sc-dIsUp ixfuAO spinner-border"
+  role="status"
+>
+  <span
+    className="sr-only"
+  >
+    Загрузка...
+  </span>
+</div>
+`;

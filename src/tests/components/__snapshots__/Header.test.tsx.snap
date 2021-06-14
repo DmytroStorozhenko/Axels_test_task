@@ -27,3 +27,31 @@ exports[`Header renders correctly 1`] = `
   </a>
 </nav>
 `;
+
+exports[`Snapshot for Header component 1`] = `
+<nav
+  className="sc-bdnxRM cnostj navbar navbar-expand navbar-dark bg-dark"
+>
+  <a
+    aria-current="page"
+    className="active"
+    href="/"
+    onClick={[Function]}
+    style={Object {}}
+  >
+    <span
+      className="navbar-brand"
+    >
+      <img
+        alt=""
+        className="d-inline-block align-top"
+        height="30"
+        src="gunsLogo.png"
+        width="30"
+      />
+       
+      GunsPlace
+    </span>
+  </a>
+</nav>
+`;

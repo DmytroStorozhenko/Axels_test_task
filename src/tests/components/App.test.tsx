@@ -5,7 +5,7 @@ import { App } from '../../App';
 
 import { store } from '../../redux/store';
 
-test( 'App renders correctly', () => {
+test( 'Snapshot for App component', () => {
     const tree = renderer
         .create(
             <Provider store={store}>
